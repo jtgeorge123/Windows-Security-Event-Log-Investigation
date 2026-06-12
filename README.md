@@ -24,6 +24,7 @@ Review and export Windows logs and document findings related to authentication a
 | 4624 | Successful Login |
 | 4625 | Failed Login |
 | 4634 | Logoff |
+| 4672 | Privileges Assigned |
 
 ## Analysis Process
 
