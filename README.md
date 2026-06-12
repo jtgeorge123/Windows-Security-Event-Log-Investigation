@@ -71,10 +71,6 @@ Identified special privileges assigned from running programs as an administrator
 
 ![4672](screenshots/event-4672.png)
 
-### PowerShell Analysis Script
-
-!(screenshots/script.png)
-
 ## Key Takeaways
 
 This project demonstrates the ability to investigate Windows logs, identify authentication events, and document findings similar to tasks performed in entry-level SOC analyst and IT support roles.
