@@ -38,25 +38,12 @@ Review and export Windows logs and document findings related to authentication a
 
 ## Findings
 
-### Successful Logins (4624)
+via Event Viewer:
 
-Observed multiple successful logins from local user accounts.
-
-### Failed Logins (4625)
-
-Identified failed login attempts and reviewed source information.
-
-### Logoffs (4634)
-
-Identified logoffs from local user accounts.
-
-### Special Privileges Assigned (4672)
-
-Identified special privileges assigned from running programs as an administrator.
-
-### Powershell command to export Security Event logs.
-
-Exported Security Event logs as a csv file for further viewing.
+- Identified successful login attempts
+- Identified failed login attempts
+- Identified privilages assigned
+- Exported 100 Security Event logs using PowerShell
 
 ## Skills Demonstrated
 
