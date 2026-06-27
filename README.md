@@ -70,7 +70,8 @@ Identified special privileges assigned from running programs as an administrator
 
 ### Event ID 4672
 
-![4672](screenshots/event-4672.png)
+<img width="1517" height="878" alt="Screenshot 2026-06-11 190124" src="https://github.com/user-attachments/assets/9d1436af-ef47-4c9f-8055-71998525736c" />
+
 
 ## Key Takeaways
 
