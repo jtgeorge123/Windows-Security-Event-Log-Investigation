@@ -46,9 +46,17 @@ Observed multiple successful logins from local user accounts.
 
 Identified failed login attempts and reviewed source information.
 
+### Logoffs (4634)
+
+Identified logoffs from local user accounts.
+
 ### Special Privileges Assigned (4672)
 
 Identified special privileges assigned from running programs as an administrator.
+
+### Powershell command to export Security Event logs.
+
+Exported Security Event logs as a csv file for further viewing.
 
 ## Skills Demonstrated
 
@@ -62,15 +70,24 @@ Identified special privileges assigned from running programs as an administrator
 
 ### Event ID 4624
 
-![4624](screenshots/event-4624.png)
+<img width="1377" height="887" alt="Screenshot 2026-06-11 185303" src="https://github.com/user-attachments/assets/4fa47bd8-315a-4a62-9d4b-930282d1fcd4" />
 
 ### Event ID 4625
 
-![4625](screenshots/event-4625.png)
+<img width="1507" height="872" alt="Screenshot 2026-06-11 185552" src="https://github.com/user-attachments/assets/b0a6ff98-e7e9-4e25-be32-38a69784cec1" />
+
+### Event ID 4634
+
+<img width="1502" height="852" alt="Screenshot 2026-06-11 190008" src="https://github.com/user-attachments/assets/760b765e-b070-4c5c-8607-4125956327c5" />
 
 ### Event ID 4672
 
 <img width="1517" height="878" alt="Screenshot 2026-06-11 190124" src="https://github.com/user-attachments/assets/9d1436af-ef47-4c9f-8055-71998525736c" />
+
+### Powershell command/Exported csv output
+
+<img width="892" height="176" alt="Screenshot 2026-06-11 191220" src="https://github.com/user-attachments/assets/010bdae9-1228-4b4d-9429-ec57b704754c" />
+<img width="1246" height="677" alt="Screenshot 2026-06-11 191412" src="https://github.com/user-attachments/assets/248fdd81-0788-4f32-ac0a-2fe82d6282c1" />
 
 
 ## Key Takeaways
