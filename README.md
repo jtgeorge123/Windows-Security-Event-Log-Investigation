@@ -105,6 +105,13 @@ Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/S
 
 See [FINDINGS.md](docs/FINDINGS.md) for detailed analysis.
 
+### MITRE ATT&CK Mapping
+
+| Windows Event ID | MITRE Technique / Tactic |
+| :--- | :--- |
+| **Event ID 4625 (Failed Logon)** | T1110 - Brute Force (Credential Access) |
+| **Event ID 4672 (Special Privileges)** | T1078 - Valid Accounts (Privilege Escalation) |
+
 ## Events Investigated
 
 | Event ID | Description | Purpose | Frequency |
