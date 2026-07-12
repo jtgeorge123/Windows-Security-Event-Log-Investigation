@@ -54,15 +54,12 @@ Open the generated report:
 ```powershell
 Invoke-Item "C:\SecurityAnalysis\Results\Analysis.html"
 ```
-# Open the generated report
-Invoke-Item "C:\SecurityAnalysis\Results\Analysis.html"
-```
 
 Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/SETUP.md` for full setup and troubleshooting.
 
 ## Project Structure
 
-```
+```text
 ├── README.md                          # This file
 ├── PORTFOLIO.md                       # Portfolio summary for hiring
 ├── docs/
@@ -78,6 +75,7 @@ Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/S
     ├── event-4625-failed-login.png
     ├── event-4634-logoff.png
     └── event-4672-privileges.png
+
 ```
 
 ## Investigation Summary
@@ -85,6 +83,7 @@ Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/S
 **Scope**: Windows Security Event Log Analysis (Event IDs 4624, 4625, 4634, 4672)
 
 **Objectives**:
+
 - ✅ Identify authentication events (successful and failed logins)
 - ✅ Track privileged account activity
 - ✅ Document logoff events
@@ -92,6 +91,7 @@ Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/S
 - ✅ Create reusable analysis tools
 
 **Key Findings**:
+
 - Identified successful login attempts with user context
 - Identified failed login attempts with failure reasons
 - Tracked privilege escalation events
@@ -102,7 +102,7 @@ See [FINDINGS.md](docs/FINDINGS.md) for detailed analysis.
 ## Events Investigated
 
 | Event ID | Description | Purpose | Frequency |
-|-----------|-------------|---------|-----------|
+| --- | --- | --- | --- |
 | 4624 | Successful Account Logon | Track successful authentication | High |
 | 4625 | Failed Account Logon | Identify failed login attempts & potential intrusions | Medium |
 | 4634 | An Account Was Logged Off | Monitor session endings & user activity | High |
@@ -143,31 +143,37 @@ See [METHODOLOGY.md](docs/METHODOLOGY.md) for detailed process documentation.
 ## Evidence & Screenshots
 
 ### Event ID 4624 - Successful Logon
+
 <img width="1377" height="887" alt="Event ID 4624 showing successful login details" src="https://github.com/user-attachments/assets/4fa47bd8-315a-4a62-9d4b-930282d1fcd4" />
 
 **Analysis**: Shows successful authentication with user account, logon type, source IP, and timestamp.
 
 ### Event ID 4625 - Failed Logon
+
 <img width="1507" height="872" alt="Event ID 4625 showing failed login attempt" src="https://github.com/user-attachments/assets/b0a6ff98-e7e9-4e25-be32-38a69784cec1" />
 
 **Analysis**: Demonstrates failed authentication with failure reason (invalid password, account disabled, etc.).
 
 ### Event ID 4634 - Logoff
+
 <img width="1502" height="852" alt="Event ID 4634 showing logoff event" src="https://github.com/user-attachments/assets/760b765e-b070-4c5c-8607-4125956327c5" />
 
 **Analysis**: Tracks user session termination and logoff events.
 
 ### Event ID 4672 - Privilege Assignment
+
 <img width="1517" height="878" alt="Event ID 4672 showing privilege escalation" src="https://github.com/user-attachments/assets/9d1436af-ef47-4c9f-8055-71998525736c" />
 
 **Analysis**: Records when special privileges are assigned to user accounts (admin rights, etc.).
 
 ### PowerShell Export
+
 <img width="892" height="176" alt="PowerShell export command" src="https://github.com/user-attachments/assets/010bdae9-1228-4b4d-9429-ec57b704754c" />
 
 **Command Used**: Export-WinEvent with Get-WinEvent for filtered log extraction
 
 ### Exported CSV Analysis
+
 <img width="1246" height="677" alt="Exported CSV data showing 100 security events" src="https://github.com/user-attachments/assets/248fdd81-0788-4f32-ac0a-2fe82d6282c1" />
 
 **Results**: Successfully exported 100+ security events to CSV format for further analysis.
