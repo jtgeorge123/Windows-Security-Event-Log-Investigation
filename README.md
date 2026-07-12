@@ -216,6 +216,9 @@ This project is fully reproducible. See [SETUP.md](docs/SETUP.md) for instructio
 - [MITRE ATT&CK Framework](https://attack.mitre.org/) - Connect events to adversary tactics
 - [Event Log Analysis Best Practices](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/auditing-events)
 
+## Enterprise Scalability Note: 
+
+- While this project utilizes localized PowerShell and Windows Event Viewer, in an enterprise environment, these exact Event IDs would be centrally ingested via an agent (like Winlogbeat or Universal Forwarder) into a centralized SIEM (like Splunk or an Elastic Stack) for real-time alerting, correlation with network traffic, and automated playbook orchestration.
 ---
 
 **Project Status**: ✅ Complete | **Last Updated**: 2026-07-09 | **Developed for**: Security Portfolio Demonstration
