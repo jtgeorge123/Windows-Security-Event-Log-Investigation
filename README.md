@@ -15,6 +15,51 @@ Comprehensive investigation of Windows Event Viewer security logs to identify an
 - **Event Reference**: See [EVENT-IDS.md](docs/EVENT-IDS.md) for complete event documentation
 - **Setup**: See [SETUP.md](docs/SETUP.md) for reproducibility
 
+### Quick Run
+
+Run these PowerShell commands on a Windows machine (open PowerShell as Administrator). Adjust paths as needed.
+
+Prerequisites:
+
+- Run PowerShell as Administrator
+- PowerShell 5.0 or newer
+- (Optional) Allow scripts for this session:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Export events (from the repository `scripts` folder):
+
+```powershell
+cd C:\Path\To\Repository\scripts
+.\export-logs.ps1 -Hours 24 -OutputPath "C:\SecurityAnalysis\Results" -IncludeDetails -Verbose
+```
+
+Analyze exported CSVs and generate an HTML report:
+
+```powershell
+.\analyze-logs.ps1 -CsvFolder "C:\SecurityAnalysis\Results" -OutputReport "C:\SecurityAnalysis\Results\Analysis.html" -IncludeCharts -Verbose
+```
+
+One-step wrapper (export + analysis):
+
+```powershell
+cd C:\Path\To\Repository\scripts
+.\run-analysis.ps1 -Hours 24 -AnalysisRoot "C:\SecurityAnalysis" -IncludeDetails -IncludeCharts -Verbose
+```
+
+Open the generated report:
+
+```powershell
+Invoke-Item "C:\SecurityAnalysis\Results\Analysis.html"
+```
+# Open the generated report
+Invoke-Item "C:\SecurityAnalysis\Results\Analysis.html"
+```
+
+Notes: scripts require PowerShell 5.0+ and Administrator privileges. See `docs/SETUP.md` for full setup and troubleshooting.
+
 ## Project Structure
 
 ```
