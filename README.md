@@ -6,7 +6,10 @@
 
 ## Overview
 
-Comprehensive investigation of Windows Event Viewer security logs to identify and analyze authentication events, system activities, and potential security concerns. This project demonstrates the methodologies and tools used by SOC analysts and IT security professionals during incident investigation and routine security monitoring.
+Comprehensive investigation of Windows Event Viewer security logs to identify and analyze
+authentication events, system activities, and potential security concerns. This project
+demonstrates the methodologies and tools used by SOC analysts and IT security
+professionals during incident investigation and routine security monitoring.
 
 ## Quick Start
 
@@ -39,7 +42,10 @@ cd C:\Path\To\Repository\scripts
 Analyze exported CSVs and generate an HTML report:
 
 ```powershell
-.\analyze-logs.ps1 -CsvFolder "C:\SecurityAnalysis\Results" -OutputReport "C:\SecurityAnalysis\Results\Analysis.html" -IncludeCharts -Verbose
+.\analyze-logs.ps1 `
+    -CsvFolder "C:\SecurityAnalysis\Results" `
+    -OutputReport "C:\SecurityAnalysis\Results\Analysis.html" `
+    -IncludeCharts -Verbose
 ```
 
 One-step wrapper (export + analysis):
@@ -191,6 +197,7 @@ This investigation demonstrates core competencies required in security operation
 ## Reproducibility
 
 This project is fully reproducible. See [SETUP.md](docs/SETUP.md) for instructions on:
+
 - Setting up the investigation environment
 - Running the provided PowerShell scripts
 - Filtering and exporting your own security logs
